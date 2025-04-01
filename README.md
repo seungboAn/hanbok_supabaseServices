@@ -8,22 +8,36 @@ This package provides services to interact with Supabase, including authenticati
 
 ### Installation
 
+#### Option 1: Using setup script (recommended)
+
+The easiest way to install this package is by using the provided setup script:
+
+```bash
+# Clone the repository
+git clone https://github.com/seungboAn/hanbok_supabaseServices.git
+
+# Run the setup script (where my_flutter_app is your project directory)
+cd hanbok_supabaseServices
+./setup_script.sh /path/to/my_flutter_app
+```
+
+#### Option 2: Manual installation
+
 Add this package to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
   supabase_services:
-    path: ../supabase_services  # Adjust path as needed
+    git:
+      url: https://github.com/seungboAn/hanbok_supabaseServices.git
 ```
 
-Or if using git:
+Or for local development:
 
 ```yaml
 dependencies:
   supabase_services:
-    git:
-      url: https://your-repo-url.git
-      path: supabase_services
+    path: ../path_to_supabase_services  # Adjust path as needed
 ```
 
 ### Configuration
@@ -38,6 +52,7 @@ SUPABASE_ANON_KEY=your_supabase_anon_key
 2. Initialize the package in your app's `main.dart`:
 
 ```dart
+import 'package:flutter/material.dart';
 import 'package:supabase_services/supabase_services.dart';
 
 void main() async {
@@ -62,6 +77,12 @@ void main() async {
 - `SupabaseService`: Core service for interacting with Supabase
 - `EnvService`: Service for loading environment variables
 - `InferenceService`: Service for image processing with edge functions
+
+## Documentation
+
+- See [SETUP_GUIDE.md](SETUP_GUIDE.md) for detailed setup instructions
+- See [INTEGRATION.md](INTEGRATION.md) for integration guidelines
+- See `example_usage.dart` for a complete usage example
 
 ## Usage Example
 
