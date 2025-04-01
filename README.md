@@ -8,7 +8,14 @@ This package provides services to interact with Supabase, including authenticati
 
 ### Installation
 
-#### Option 1: Using setup script (recommended)
+#### Option 1: One-line installer (Easiest)
+
+```bash
+# Run this in your terminal (replace with your project path)
+curl -s https://raw.githubusercontent.com/seungboAn/hanbok_supabaseServices/master/install.sh | bash -s -- /path/to/my_flutter_app
+```
+
+#### Option 2: Using setup script (recommended)
 
 The easiest way to install this package is by using the provided setup script:
 
@@ -21,7 +28,7 @@ cd hanbok_supabaseServices
 ./setup_script.sh /path/to/my_flutter_app
 ```
 
-#### Option 2: Manual installation
+#### Option 3: Manual installation
 
 Add this package to your `pubspec.yaml`:
 
